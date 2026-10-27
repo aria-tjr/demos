@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vantaro Quant | Panel de control de bot de trading (Demo / datos simulados)</title>
+<meta name="description" content="Demo interactiva: panel de control de un bot de trading multiplataforma (MT5, Binance, BingX) con backtest, gestión de riesgo, paper trading y alertas. Todos los datos son simulados.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-logo" viewBox="0 0 32 32"><rect x="1" y="1" width="30" height="30" rx="8" fill="currentColor" opacity=".14"/><path d="M7 21l6-7 5 4 7-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="9" r="2.4" fill="currentColor"/></symbol>
+    <symbol id="i-dash" viewBox="0 0 24 24"><path d="M3 13h8V3H3zM13 21h8V11h-8zM3 21h8v-6H3zM13 3v6h8V3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-strategy" viewBox="0 0 24 24"><path d="M4 19l5-6 4 3 7-9M4 4v16h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-backtest" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0zM12 17v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1 1 12 0v5l2 2H4zM10 21h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="currentColor"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.8-4M4 4v4h4M4 13a8 8 0 0 0 14.8 4M20 20v-4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2zM12 10v5M12 18h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6M12 7.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-mt5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4M7 13l3-3 2 2 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-exchange" viewBox="0 0 24 24"><path d="M4 8h14l-4-4M20 16H6l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div class="demo-banner" role="note">
+  <svg class="ic"><use href="#i-info"/></svg>
+  <span><strong>Demo / datos simulados.</strong> Marca, cuentas, precios y conexiones son ficticios. No se conecta a ningún bróker ni exchange real y no se envía ninguna orden ni mensaje.</span>
+</div>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <svg class="brand-logo"><use href="#i-logo"/></svg>
+      <div><div class="brand-name">Vantaro Quant</div><div class="brand-sub">Panel de control</div></div>
+    </div>
+    <nav class="nav" id="nav">
+      <button data-tab="panel" class="active"><svg class="ic"><use href="#i-dash"/></svg><span>Panel en vivo</span></button>
+      <button data-tab="estrategia"><svg class="ic"><use href="#i-strategy"/></svg><span>Estrategia</span></button>
+      <button data-tab="backtest"><svg class="ic"><use href="#i-backtest"/></svg><span>Backtest</span></button>
+      <button data-tab="riesgo"><svg class="ic"><use href="#i-shield"/></svg><span>Riesgo</span></button>
+      <button data-tab="conectores"><svg class="ic"><use href="#i-plug"/></svg><span>Conectores</span></button>
+      <button data-tab="alertas"><svg class="ic"><use href="#i-bell"/></svg><span>Alertas</span><em class="badge" id="alertBadge">0</em></button>
+      <button data-tab="registro"><svg class="ic"><use href="#i-list"/></svg><span>Registro</span></button>
+    </nav>
+    <div class="side-foot">
+      <div class="mode-box">
+        <div class="mode-label">Modo de ejecución</div>
+        <div class="seg" id="modeSeg">
+          <button class="on" data-mode="paper">Paper trading</button>
+          <button data-mode="live" title="Deshabilitado en la demo">Real</button>
+        </div>
+        <p class="tiny muted" id="modeHint">Las órdenes se simulan. Ningún capital real.</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">Panel en vivo</h1>
+        <p class="muted" id="pageSub">Paper trading sobre un instrumento ficticio, con señales solo al cierre de vela.</p>
+      </div>
+      <div class="top-actions">
+        <div class="pill"><span class="dot" id="engineDot"></span><span id="engineState">Motor detenido</span></div>
+        <div class="pill mono" id="clock">--:--:--</div>
+      </div>
+    </header>
+
+    <!-- PANEL -->
+    <section class="tab active" id="tab-panel">
+      <div class="kpis">
+        <div class="kpi"><div class="kpi-l">Capital paper (total)</div><div class="kpi-v mono" id="kEquity">-</div><div class="kpi-s" id="kEquityS">3 cuentas simuladas</div></div>
+        <div class="kpi"><div class="kpi-l">P/L de la sesión</div><div class="kpi-v mono" id="kPnl">-</div><div class="kpi-s">realizado + flotante</div></div>
+        <div class="kpi"><div class="kpi-l">Posiciones abiertas</div><div class="kpi-v mono" id="kPos">0</div><div class="kpi-s" id="kPosS">-</div></div>
+        <div class="kpi"><div class="kpi-l">Conectores</div><div class="kpi-v mono" id="kConn">-</div><div class="kpi-s">conectados / total</div></div>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <div><h3><span id="liveSym">SIM-100</span> <span class="muted">·</span> <span id="liveTf">M15</span></h3><p class="muted tiny">Precio ficticio generado en el navegador. Rueda del ratón: zoom. Arrastrar: desplazar.</p></div>
+          <div class="row gap">
+            <div class="seg small" id="speedSeg"><button data-speed="1" class="on">1x</button><button data-speed="3">3x</button><button data-speed="8">8x</button></div>
+            <button class="btn ghost" id="btnResend" title="Prueba de idempotencia: reenvía la última señal"><svg class="ic"><use href="#i-copy"/></svg>Reenviar última señal</button>
+            <button class="btn primary" id="btnRun"><svg class="ic"><use href="#i-play"/></svg><span>Iniciar</span></button>
+          </div>
+        </div>
+        <div class="chart-wrap tall"><canvas id="liveChart"></canvas><div class="tip" id="liveTip"></div></div>
+        <div class="legend" id="liveLegend"></div>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="card-h"><h3>Cuentas y posiciones</h3><span class="muted tiny">Cada cuenta es independiente</span></div>
+          <div class="table-wrap"><table class="tbl" id="accTable"><thead><tr><th>Cuenta</th><th>Estado</th><th>Posición</th><th class="r">Entrada</th><th class="r">SL / TP</th><th class="r">Flotante</th><th class="r">Capital</th></tr></thead><tbody></tbody></table></div>
+        </div>
+        <div class="card">
+          <div class="card-h"><h3>Actividad reciente</h3><button class="link" data-goto="registro">Ver registro completo</button></div>
+          <ul class="feed" id="miniFeed"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRATEGIA -->
+    <section class="tab" id="tab-estrategia">
+      <div class="grid2">
+        <div class="card">
+          <div class="card-h"><h3>Lógica de señales</h3></div>
+          <div class="form">
+            <label>Estrategia
+              <select id="stType">
+                <option value="ema">Cruce de EMAs</option>
+                <option value="rsi">RSI (sobrecompra / sobreventa)</option>
+                <option value="emarsi">Cruce de EMAs con filtro RSI</option>
+              </select>
+            </label>
+            <div class="f2">
+              <label>EMA rápida <input type="number" id="stFast" min="2" max="100" value="9"></label>
+              <label>EMA lenta <input type="number" id="stSlow" min="3" max="300" value="21"></label>
+            </div>
+            <div class="f3">
+              <label>Periodo RSI <input type="number" id="stRsi" min="2" max="50" value="14"></label>
+              <label>Sobreventa <input type="number" id="stLow" min="5" max="50" value="30"></label>
+              <label>Sobrecompra <input type="number" id="stHigh" min="50" max="95" value="70"></label>
+            </div>
+            <label>Dirección
+              <select id="stDir"><option value="both">Largos y cortos</option><option value="long">Solo largos</option><option value="short">Solo cortos</option></select>
+            </label>
+            <div class="f2">
+              <label>Instrumento (ficticio)
+                <select id="stSym"><option value="SIM-100">SIM-100 (índice)</option><option value="XSIM/USD">XSIM/USD (divisa)</option><option value="SIMCOIN-PERP">SIMCOIN-PERP (cripto)</option></select>
+              </label>
+              <label>Temporalidad
+                <select id="stTf"><option value="5">M5</option><option value="15" selected>M15</option><option value="60">H1</option><option value="240">H4</option></select>
+              </label>
+            </div>
+            <label class="check"><input type="checkbox" id="stClose" checked disabled> Confirmar señal solo al cierre de la vela (sin repintado)</label>
+            <label class="check"><input type="checkbox" id="stDedup" checked> ID único por vela y cuenta (evita órdenes duplicadas)</label>
+          </div>
+          <div class="row gap mt">
+            <button class="btn primary" id="btnApplyStrat"><svg class="ic"><use href="#i-refresh"/></svg>Aplicar y recalcular backtest</button>
+            <span class="muted tiny" id="stratSaved"></span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-h"><h3>Vista previa de la señal</h3><span class="muted tiny">Pseudocódigo generado a partir de la configuración</span></div>
+          <pre class="code" id="stratCode"></pre>
+          <div class="card-h mt"><h3>Últimas señales sobre los datos de prueba</h3></div>
+          <ul class="feed compact" id="sigPreview"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKTEST -->
+    <section class="tab" id="tab-backtest">
+      <div class="card">
+        <div class="card-h">
+          <div><h3>Backtest sobre datos ficticios</h3><p class="muted tiny">Serie de precios generada con semilla. Misma semilla, mismo resultado.</p></div>
+          <div class="row gap">
+            <label class="inline">Semilla <input type="number" id="btSeed" value="2187" class="w90"></label>
+            <label class="inline">Velas <select id="btBars"><option>300</option><option selected>600</option><option>1200</option></select></label>
+            <button class="btn ghost" id="btnNewData"><svg class="ic"><use href="#i-refresh"/></svg>Nuevos datos</button>
+            <button class="btn primary" id="btnRunBt"><svg class="ic"><use href="#i-play"/></svg>Ejecutar backtest</button>
+          </div>
+        </div>
+        <div class="kpis inner" id="btKpis"></div>
+        <div class="chart-wrap tall"><canvas id="btChart"></canvas><div class="tip" id="btTip"></div></div>
+        <div class="legend" id="btLegend"></div>
+        <h4 class="sub">Curva de capital y drawdown</h4>
+        <div class="chart-wrap short"><canvas id="eqChart"></canvas></div>
+        <p class="disclaimer"><svg class="ic"><use href="#i-info"/></svg>Resultados calculados sobre datos inventados con comisiones y slippage simulados. Sirven para probar la lógica del bot, no indican rentabilidad futura.</p>
+      </div>
+      <div class="card">
+        <div class="card-h"><h3>Operaciones del backtest</h3><button class="btn ghost" id="btnCsvBt"><svg class="ic"><use href="#i-download"/></svg>Exportar CSV</button></div>
+        <div class="table-wrap max"><table class="tbl" id="btTable"><thead><tr><th>#</th><th>Lado</th><th>Entrada</th><th class="r">Precio</th><th>Salida</th><th class="r">Precio</th><th>Motivo</th><th class="r">Tamaño</th><th class="r">P/L</th><th class="r">R</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- RIESGO -->
+    <section class="tab" id="tab-riesgo">
+      <div class="grid2">
+        <div class="card">
+          <div class="card-h"><h3>Gestión de riesgo</h3><span class="muted tiny">Se aplica al backtest y al paper trading</span></div>
+          <div class="form">
+            <div class="range"><label for="rkRisk">Riesgo por operación</label><input type="range" id="rkRisk" min="0.25" max="3" step="0.25" value="1"><output id="oRisk" class="mono"></output></div>
+            <div class="range"><label for="rkSl">Stop loss</label><input type="range" id="rkSl" min="0.3" max="5" step="0.1" value="1.5"><output id="oSl" class="mono"></output></div>
+            <div class="range"><label for="rkTp">Take profit</label><input type="range" id="rkTp" min="0.5" max="10" step="0.1" value="3"><output id="oTp" class="mono"></output></div>
+            <div class="range"><label for="rkDd">Drawdown máximo (detiene el bot)</label><input type="range" id="rkDd" min="3" max="40" step="1" value="12"><output id="oDd" class="mono"></output></div>
+            <div class="range"><label for="rkLev">Exposición máxima</label><input type="range" id="rkLev" min="1" max="10" step="1" value="3"><output id="oLev" class="mono"></output></div>
+            <label class="check"><input type="checkbox" id="rkTrail"> Trailing stop</label>
+            <div class="range" id="trailRow"><label for="rkTrailPct">Distancia del trailing</label><input type="range" id="rkTrailPct" min="0.3" max="4" step="0.1" value="1.2"><output id="oTrail" class="mono"></output></div>
+            <div class="f2">
+              <label>Horario de operación desde (UTC) <input type="number" id="rkH1" min="0" max="23" value="0"></label>
+              <label>hasta (UTC) <input type="number" id="rkH2" min="1" max="24" value="24"></label>
+            </div>
+            <label class="check"><input type="checkbox" id="rkWeekend"> Operar fines de semana</label>
+          </div>
+          <div class="row gap mt"><button class="btn primary" id="btnApplyRisk"><svg class="ic"><use href="#i-refresh"/></svg>Aplicar y recalcular backtest</button></div>
+        </div>
+        <div class="card">
+          <div class="card-h"><h3>Calculadora de posición</h3><span class="muted tiny">Tamaño por % de riesgo</span></div>
+          <div class="form">
+            <div class="f2">
+              <label>Capital de la cuenta <input type="number" id="calcEq" value="10000"></label>
+              <label>Precio de entrada <input type="number" id="calcPx" value="100" step="0.01"></label>
+            </div>
+          </div>
+          <div class="calc" id="calcOut"></div>
+          <div class="card-h mt"><h3>Reglas activas</h3></div>
+          <ul class="rules" id="rulesList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONECTORES -->
+    <section class="tab" id="tab-conectores">
+      <p class="note"><svg class="ic"><use href="#i-info"/></svg>Conectores simulados. En un proyecto real, MT5 se ejecuta en un VPS Windows con el paquete oficial de Python y Binance / BingX vía API. Aquí puede probar caídas y reconexiones: una cuenta con error no afecta a las demás.</p>
+      <div class="conn-grid" id="connGrid"></div>
+      <div class="card">
+        <div class="card-h"><h3>Mapeo de símbolos y ejecución</h3></div>
+        <div class="table-wrap"><table class="tbl" id="mapTable"><thead><tr><th>Cuenta</th><th>Plataforma</th><th>Símbolo interno</th><th>Símbolo en plataforma</th><th>Tipo de orden</th><th>Llenado</th><th class="r">Latencia sim.</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </section>
+
+    <!-- ALERTAS -->
+    <section class="tab" id="tab-alertas">
+      <div class="grid2">
+        <div class="card">
+          <div class="card-h"><h3>Configuración de alertas</h3><span class="muted tiny">Solo vista previa: no se envía nada</span></div>
+          <div class="form">
+            <label>Canal
+              <select id="alChannel"><option value="telegram">Mensajería (estilo Telegram)</option><option value="email">Correo electrónico</option><option value="webhook">Webhook JSON</option></select>
+            </label>
+            <label class="check"><input type="checkbox" class="alEv" value="entry" checked> Apertura de posición</label>
+            <label class="check"><input type="checkbox" class="alEv" value="exit" checked> Cierre (SL, TP, señal contraria)</label>
+            <label class="check"><input type="checkbox" class="alEv" value="error" checked> Error o caída de conector</label>
+            <label class="check"><input type="checkbox" class="alEv" value="dd" checked> Límite de drawdown alcanzado</label>
+            <label class="check"><input type="checkbox" class="alEv" value="signal"> Cada señal detectada</label>
+          </div>
+          <div class="row gap mt"><button class="btn ghost" id="btnTestAlert"><svg class="ic"><use href="#i-send"/></svg>Generar alerta de prueba</button><button class="btn ghost" id="btnClearAlerts">Limpiar</button></div>
+        </div>
+        <div class="card">
+          <div class="card-h"><h3>Vista previa</h3><span class="muted tiny" id="alCount"></span></div>
+          <div class="alert-preview" id="alertList"><p class="muted empty">Inicie el motor en el Panel en vivo o genere una alerta de prueba.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRO -->
+    <section class="tab" id="tab-registro">
+      <div class="card">
+        <div class="card-h">
+          <h3>Registro de eventos</h3>
+          <div class="row gap">
+            <div class="seg small" id="logFilter"><button data-f="all" class="on">Todo</button><button data-f="order">Órdenes</button><button data-f="signal">Señales</button><button data-f="system">Sistema</button><button data-f="error">Errores</button></div>
+            <button class="btn ghost" id="btnCsvLog"><svg class="ic"><use href="#i-download"/></svg>CSV</button>
+          </div>
+        </div>
+        <div class="table-wrap max"><table class="tbl mono-sm" id="logTable"><thead><tr><th>Hora</th><th>Tipo</th><th>Cuenta</th><th>Mensaje</th><th>ID</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </section>
+
+    <footer class="foot muted tiny">Vantaro Quant es una marca ficticia creada para esta demo. Demo / datos simulados. Sin promesas de rentabilidad: el objetivo es mostrar cómo se controla y se prueba un bot. Hecho por Aria Tajeri.</footer>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
