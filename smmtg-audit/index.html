@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>گزارش بررسی سئو و سرعت smmtg.com</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="گزارش اختصاصی بررسی سئو، سرعت و فرصت‌های رشد ترافیک برای smmtg.com">
+<meta name="theme-color" content="#0b1f1c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cpath d='M8 21l5-5 4 4 7-8' stroke='%23d9f99d' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f5;--card:#fff;--ink:#0f1f1c;--ink2:#47605b;--mut:#7d918d;--line:#e3ebe9;--pri:#0f766e;--pri2:#14b8a6;--acc:#22c55e;--lime:#d9f99d;--side:#0b1f1c;--red:#e5484d;--org:#f59e0b;--yel:#eab308;--blu:#3b82f6;--r:16px;--sh:0 1px 2px rgba(15,31,28,.04),0 6px 24px -8px rgba(15,31,28,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--ink);font-size:14.5px;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:var(--pri)}
+html,body{overflow-x:hidden}
+td,th,.card,.issue p{overflow-wrap:anywhere}
+code{word-break:break-word}
+svg.ic{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+/* hero */
+.hero{background:radial-gradient(1200px 400px at 90% -10%,rgba(20,184,166,.35),transparent 60%),linear-gradient(160deg,#0b1f1c,#0f2e29 60%,#0b1f1c);color:#cfe3de;padding:34px 0 96px}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:26px}
+.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--pri2),var(--pri));display:grid;place-items:center;color:var(--lime)}
+.logo svg{width:24px;height:24px}
+.brand b{display:block;color:#fff;font-size:17px;font-weight:800;line-height:1.3}
+.brand small{color:#8fb3ab;font-size:12px}
+.hero h1{color:#fff;font-size:30px;font-weight:800;line-height:1.55;letter-spacing:-.3px}
+.chip{display:inline-flex;gap:6px;align-items:center;direction:ltr;background:rgba(217,249,157,.12);color:var(--lime);border:1px solid rgba(217,249,157,.25);border-radius:99px;padding:2px 12px;font-size:14px;font-weight:600;vertical-align:middle}
+.hero p.lead{max-width:760px;margin-top:10px;color:#b9d3cd;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font-size:12.8px;color:#8fb3ab}
+.meta span{display:inline-flex;gap:7px;align-items:center}
+main{margin-top:-70px;padding-bottom:60px}
+.sec{margin-bottom:28px;display:grid;gap:16px}
+.sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-top:10px}
+.sec-h h2{font-size:20px;font-weight:800;display:flex;gap:10px;align-items:center}
+.sec-h h2 svg{color:var(--pri);width:22px;height:22px}
+.sec-h p{color:var(--mut);font-size:12.8px}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:22px;border:1px solid rgba(227,235,233,.7);min-width:0}
+.ch{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.ch h3{font-size:15.5px;font-weight:700;display:flex;gap:8px;align-items:center}
+.ch h3 svg{color:var(--pri)}
+.muted{color:var(--mut);font-size:12.5px}
+.tag{font-size:11.5px;font-weight:700;padding:2px 10px;border-radius:99px;white-space:nowrap}
+.tag.hi{background:#fde8e8;color:#c0262c}.tag.md{background:#fef3c7;color:#a16207}.tag.lo{background:#e0ecff;color:#1d4ed8}.tag.ok{background:#dcfce7;color:#15803d}.tag.warn{background:#fef3c7;color:#a16207}
+/* summary */
+.g-sum{display:grid;grid-template-columns:330px 1fr;gap:16px}
+.score-wrap{position:relative;width:240px;margin:6px auto 0}
+.gauge{width:100%;display:block}
+.score-num{position:absolute;inset:auto 0 6px 0;text-align:center}
+.score-num b{font-size:46px;font-weight:800;line-height:1;color:var(--ink)}
+.score-num small{display:block;color:var(--mut);font-size:12px}
+.score-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;text-align:center}
+.score-meta div{background:#f6faf9;border-radius:12px;padding:8px}
+.score-meta small{display:block;color:var(--mut);font-size:11.5px}
+.score-meta b{font-size:18px}
+.cats{display:grid;gap:13px}
+.cat{display:grid;grid-template-columns:210px 1fr 54px;gap:12px;align-items:center;font-size:13.5px}
+.cat .nm{display:flex;gap:8px;align-items:center;font-weight:600}
+.cat .nm svg{color:var(--pri)}
+.bar{height:10px;background:#edf2f1;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px}
+.cat b{text-align:left;font-size:15px;direction:ltr}
+.cat small{grid-column:1/-1;margin-top:-8px;color:var(--mut);font-size:12px}
+.insight{display:flex;gap:14px;align-items:flex-start;background:linear-gradient(135deg,#f0fdf8,#fff);border-color:#cdeee2}
+.ins-ic{width:42px;height:42px;border-radius:12px;background:var(--pri);color:var(--lime);display:grid;place-items:center;flex:none}
+.insight h4{font-size:15px;margin-bottom:4px}
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--card);border-radius:14px;box-shadow:var(--sh);border:1px solid rgba(227,235,233,.7);padding:15px 16px}
+.kpi small{color:var(--mut);font-size:12px;display:flex;gap:6px;align-items:center}
+.kpi b{display:block;font-size:24px;font-weight:800;margin-top:3px;direction:ltr;text-align:right}
+.kpi .st{font-size:11.5px;font-weight:600}
+.bad{color:#c0262c}.mid{color:#b45309}.good{color:#15803d}
+/* issues */
+.issue{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--line)}
+.issue:first-of-type{border-top:0;padding-top:4px}
+.iss-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center}
+.iss-ic.hi{background:#fde8e8;color:#c0262c}.iss-ic.md{background:#fef3c7;color:#b45309}.iss-ic.lo{background:#e0ecff;color:#1d4ed8}
+.issue h4{font-size:15px;font-weight:700;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.issue p{color:var(--ink2);font-size:13.8px;margin-top:3px}
+.fix{margin-top:8px;background:#f6faf9;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:13.5px}
+.fix b{color:var(--pri)}
+.fix ul{margin:4px 18px 0 0}
+.ev{font-size:12px;color:var(--mut);margin-top:6px}
+code,pre{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.3px;direction:ltr;unicode-bidi:embed}
+code{background:#eef4f2;border-radius:6px;padding:1px 6px}
+pre{background:#0b1f1c;color:#d9f99d;border-radius:12px;padding:12px 14px;margin-top:8px;overflow:auto;text-align:left;white-space:pre-wrap;word-break:break-all}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:13.3px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:12.2px;background:#f8fbfa}
+td.l{direction:ltr;text-align:left}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list{display:grid;gap:9px;font-size:13.8px}
+.list li{list-style:none;display:flex;gap:9px;align-items:flex-start}
+.list li svg{margin-top:5px;flex:none}
+.kw{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.kw span{background:#eef7f5;color:#0b5f58;border:1px solid #d4ebe6;border-radius:99px;padding:3px 11px;font-size:12.8px}
+.kw.ltr span{direction:ltr}
+/* plan */
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ph{border-top:4px solid var(--pri);}
+.ph h4{font-size:15px;margin-bottom:6px}
+.ph .muted{display:block;margin-bottom:8px}
+/* cta */
+.cta{background:linear-gradient(150deg,#0b1f1c,#0f3b34);color:#cfe3de;border:0}
+.cta h3{color:#fff;font-size:20px;margin-bottom:6px}
+.cta .list li{color:#d7ebe6}
+.cta svg{color:var(--lime)}
+.cta .contact{margin-top:14px;display:inline-flex;gap:8px;align-items:center;background:var(--lime);color:#0b1f1c;font-weight:700;padding:9px 16px;border-radius:12px;direction:ltr}
+.foot{color:var(--mut);font-size:12px;text-align:center;margin-top:24px}
+@media (max-width:900px){.wrap{padding:0 14px}.card{padding:16px}table{font-size:12.3px}th,td{padding:7px 6px}.issue{grid-template-columns:1fr}.iss-ic{width:34px;height:34px}.g-sum,.g2,.plan{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.cat{grid-template-columns:1fr 54px}.cat .bar{grid-column:1/-1;grid-row:2}.hero h1{font-size:23px}}
+@page{size:A4;margin:10mm}
+@media print{.kpis{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:1fr 1fr}.g-sum{grid-template-columns:300px 1fr}.plan{grid-template-columns:repeat(3,1fr)}.cat{grid-template-columns:170px 1fr 44px}.cat .bar{grid-column:auto;grid-row:auto}.issue{grid-template-columns:36px 1fr}.hero h1{font-size:24px}body{background:#fff;font-size:13px}.hero{padding:24px 0 80px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.card,.kpi{box-shadow:none;break-inside:avoid}.issue{break-inside:avoid}.sec-h{break-after:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+ <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+ <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+ <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+ <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+ <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+ <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+ <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+ <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+ <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></symbol>
+ <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+ <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+ <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+ <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+ <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+ <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></symbol>
+ <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></symbol>
+ <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m20.5 20.5-4.2-4.2"/></symbol>
+ <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></symbol>
+ <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+ <symbol id="i-weight" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M6.5 8h11l3 13h-17z"/></symbol>
+</svg>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="brand"><span class="logo"><svg class="ic"><use href="#i-chart"/></svg></span><span><b>گزارش بررسی سئو و سرعت</b><small>بررسی رایگان و اختصاصی برای تیم SMM TG</small></span></div>
+  <h1>گزارش سئو، سرعت و فرصت‌های جذب کاربر واقعی <span class="chip"><svg class="ic"><use href="#i-globe"/></svg>smmtg.com</span></h1>
+  <p class="lead">هدف شما جذب کاربر واقعی به سایت است. این گزارش نشان می‌دهد الان چه چیزی جلوی دیده‌شدن سایت در گوگل و تبدیل بازدیدکننده به مشتری را گرفته و دقیقاً چه کاری باید انجام شود. همه‌ی اعداد از بررسی واقعی خود سایت در همین تاریخ گرفته شده‌اند.</p>
+  <div class="meta">
+   <span><svg class="ic"><use href="#i-cal"/></svg>تاریخ بررسی: ۵ آبان ۱۴۰۵ (۲۷ اکتبر ۲۰۲۶)</span>
+   <span><svg class="ic"><use href="#i-layers"/></svg>۲۷ نشانی نقشه‌ی سایت و ۶۱ لینک داخلی بررسی شد</span>
+   <span><svg class="ic"><use href="#i-bolt"/></svg>ابزار سرعت: Lighthouse 12.8 (موبایل و دسکتاپ)</span>
+  </div>
+ </div>
+</header>
+
+<main class="wrap">
+
+ <!-- SUMMARY -->
+ <section class="sec" id="summary">
+  <div class="g-sum">
+   <div class="card">
+    <div class="ch"><h3><svg class="ic"><use href="#i-grid"/></svg>امتیاز کلی</h3><span class="tag warn">نیاز به بهبود</span></div>
+    <div class="score-wrap">
+     <svg viewBox="0 0 200 116" class="gauge" aria-hidden="true">
+      <defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#e5484d"/><stop offset=".5" stop-color="#f59e0b"/><stop offset="1" stop-color="#22c55e"/></linearGradient></defs>
+      <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#edf2f1" stroke-width="16" stroke-linecap="round"/>
+      <path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="url(#gg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="143.2 300"/>
+     </svg>
+     <div class="score-num"><b>۵۷</b><small>از ۱۰۰</small></div>
+    </div>
+    <div class="score-meta">
+     <div><small>سرعت موبایل (Lighthouse)</small><b class="bad">۴۱</b></div>
+     <div><small>سرعت دسکتاپ (Lighthouse)</small><b class="mid">۸۶</b></div>
+     <div><small>مشکل با اولویت بالا</small><b class="bad">۵</b></div>
+     <div><small>لینک داخلی شکسته</small><b class="good">۰</b></div>
+    </div>
+   </div>
+   <div class="card">
+    <div class="ch"><h3><svg class="ic"><use href="#i-layers"/></svg>امتیاز بخش‌ها</h3><span class="muted">امتیاز کلی = میانگین این ۵ بخش</span></div>
+    <div class="cats">
+     <div class="cat"><span class="nm"><svg class="ic"><use href="#i-bolt"/></svg>سرعت موبایل</span><span class="bar"><i style="width:41%;background:#e5484d"></i></span><b>41</b><small>امتیاز Performance در Lighthouse برای موبایل</small></div>
+     <div class="cat"><span class="nm"><svg class="ic"><use href="#i-wrench"/></svg>سئوی فنی</span><span class="bar"><i style="width:67%;background:#f59e0b"></i></span><b>67</b><small>۸ مورد از ۱۲ بررسی فنی درست است</small></div>
+     <div class="cat"><span class="nm"><svg class="ic"><use href="#i-file"/></svg>محتوا و ساختار صفحات</span><span class="bar"><i style="width:33%;background:#e5484d"></i></span><b>33</b><small>۴ مورد از ۱۲ بررسی محتوا درست است</small></div>
+     <div class="cat"><span class="nm"><svg class="ic"><use href="#i-flag"/></svg>بازار فارسی و چندزبانه</span><span class="bar"><i style="width:43%;background:#f59e0b"></i></span><b>43</b><small>۳ مورد از ۷ بررسی چندزبانه درست است</small></div>
+     <div class="cat"><span class="nm"><svg class="ic"><use href="#i-search"/></svg>پایه‌های سئو در Lighthouse</span><span class="bar"><i style="width:100%;background:#22c55e"></i></span><b>100</b><small>عنوان، توضیحات، canonical، hreflang و قابلیت ایندکس صفحه‌ی اصلی درست است</small></div>
+    </div>
+   </div>
+  </div>
+
+  <div class="card insight">
+   <span class="ins-ic"><svg class="ic"><use href="#i-spark"/></svg></span>
+   <div><h4>جمع‌بندی در یک نگاه</h4>
+   <p>پایه‌های سئو (عنوان، توضیحات، canonical، hreflang، نقشه‌ی سایت) به‌خوبی چیده شده‌اند و این نقطه‌ی شروع خوبی است. مشکل اصلی جای دیگری است: <b>صفحه‌ی اصلی روی موبایل حدود ۱۰٫۷ ثانیه طول می‌کشد تا کامل دیده شود</b>، <b>صفحه‌ی لیست قیمت ۶٫۸ مگابایت HTML دارد</b>، نسخه‌ی <b>http://</b> سایت جواب نمی‌دهد و تقریباً <b>هیچ محتوایی برای کلمات کلیدی‌ای که مشتری واقعی جست‌وجو می‌کند</b> (مثل «خرید ممبر تلگرام») وجود ندارد. با اصلاح این چند مورد، سایت هم سریع‌تر می‌شود و هم برای جست‌وجوهای پرمشتری فرصت رتبه گرفتن پیدا می‌کند.</p></div>
+  </div>
+
+  <div class="kpis">
+   <div class="kpi"><small><svg class="ic"><use href="#i-clock"/></svg>LCP موبایل</small><b>10.7 s</b><span class="st bad">هدف گوگل: کمتر از ۲٫۵ ثانیه</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-clock"/></svg>FCP موبایل</small><b>4.7 s</b><span class="st bad">هدف: کمتر از ۱٫۸ ثانیه</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-code"/></svg>TBT موبایل</small><b>710 ms</b><span class="st bad">هدف: کمتر از ۲۰۰ میلی‌ثانیه</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-layers"/></svg>CLS</small><b>0</b><span class="st good">عالی، بدون جابه‌جایی</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-weight"/></svg>حجم صفحه‌ی اصلی</small><b>1.5 MB</b><span class="st mid">۳۱ درخواست، ۸۱۸ کیلوبایت آن جاوااسکریپت</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-file"/></svg>HTML صفحه‌ی Services</small><b>6.8 MB</b><span class="st bad">۲۶۳ کیلوبایت فشرده، حدود ۶٬۹۰۰ سرویس</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-clock"/></svg>زمان پاسخ سرور</small><b>180 ms</b><span class="st good">خوب</span></div>
+   <div class="kpi"><small><svg class="ic"><use href="#i-check"/></svg>لینک‌های داخلی سالم</small><b>61 / 61</b><span class="st good">هیچ لینک شکسته‌ای پیدا نشد</span></div>
+  </div>
+ </section>
+
+ <!-- SITE -->
+ <section class="sec" id="site">
+  <div class="sec-h"><h2><svg class="ic"><use href="#i-globe"/></svg>سایت چه می‌کند و برای چه بازاری است</h2></div>
+  <div class="g2">
+   <div class="card">
+    <ul class="list">
+     <li><svg class="ic good"><use href="#i-check"/></svg><span><b>نوع سایت:</b> پنل SMM برای فروش سرویس‌های شبکه‌های اجتماعی (ممبر، ویو، لایک، فالوور، استارت ربات و...) به کاربران و نمایندگان فروش، همراه با API.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span><b>سرویس‌ها:</b> ۴۱۷ دسته و حدود ۶٬۹۰۰ سرویس. بیشترین دسته‌ها: تلگرام (۱۷۱ دسته)، اینستاگرام (۱۰۳)، یوتیوب (۵۱)، تیک‌تاک (۴۳).</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span><b>زبان‌ها:</b> انگلیسی (پیش‌فرض)، عربی، فارسی، روسی و هندی، با پارامتر <code>?lang=</code>.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span><b>پرداخت:</b> بیت‌کوین، USDT، Payeer، Perfect Money، ویزا، مسترکارت و Coinbase.</span></li>
+     <li><svg class="ic mid"><use href="#i-info"/></svg><span><b>پلتفرم:</b> فایل‌های قالب از <code>cdn.officialrentalpanel.com</code> بارگذاری می‌شوند، یعنی سایت روی یک پنل اجاره‌ای (Rental Panel) ساخته شده است. بعضی اصلاحات در قالب شما انجام می‌شوند و بعضی به دسترسی سرور یا ارائه‌دهنده‌ی پنل نیاز دارند. در لیست کارها مشخص کرده‌ام.</span></li>
+    </ul>
+   </div>
+   <div class="card">
+    <div class="ch"><h3><svg class="ic"><use href="#i-check"/></svg>چیزهایی که درست انجام شده</h3></div>
+    <ul class="list">
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>عنوان و توضیحات متا برای هر صفحه و هر زبان جدا نوشته شده است.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>canonical روی همه‌ی صفحات و hreflang دوطرفه برای ۵ زبان به‌همراه x-default وجود دارد.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>robots.txt و sitemap.xml (۲۷ نشانی) سالم‌اند و صفحه‌ی بازیابی رمز noindex است.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>نسخه‌ی www با 301 به نسخه‌ی اصلی می‌رود و صفحه‌ی ناموجود 404 برمی‌گرداند.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>نسخه‌ی فارسی <code>lang="fa"</code> و <code>dir="rtl"</code> درست دارد. Accessibility در Lighthouse ۱۰۰ و Best Practices ۹۶ است.</span></li>
+    </ul>
+   </div>
+  </div>
+ </section>
+
+ <!-- ISSUES HIGH -->
+ <section class="sec" id="issues">
+  <div class="sec-h"><h2><svg class="ic"><use href="#i-alert"/></svg>مشکلات به ترتیب اولویت</h2><p>هر مورد: مشکل، شاهد، راه‌حل دقیق</p></div>
+
+  <div class="card">
+   <div class="ch"><h3><span class="tag hi">اولویت بالا</span> بیشترین اثر روی رتبه و جذب کاربر</h3></div>
+
+   <div class="issue"><span class="iss-ic hi"><svg class="ic"><use href="#i-bolt"/></svg></span><div>
+    <h4>صفحه‌ی اصلی روی موبایل خیلی کند است (امتیاز ۴۱)</h4>
+    <p>بیشتر جست‌وجوهای این حوزه با موبایل انجام می‌شود. LCP روی موبایل ۱۰٫۷ ثانیه است. ۱۵ فایل CSS و فونت جلوی نمایش صفحه را می‌گیرند (حدود ۲ ثانیه تأخیر). reCAPTCHA (۳۵۶ کیلوبایت) و Google Sign-In (۱۰۳ کیلوبایت) روی صفحه‌ی اصلی بارگذاری می‌شوند، حتی اگر کاربر وارد نشود. جاوااسکریپت پنل حدود ۵۳۰ میلی‌ثانیه رشته‌ی اصلی مرورگر را قفل می‌کند. <b>نسخه‌ی فارسی (<code>?lang=fa</code>) از این هم کندتر است:</b> امتیاز ۴۲، FCP ۶٫۲ ثانیه و LCP ۱۲٫۲ ثانیه، و فقط فونت‌هایش ۳۶۷ کیلوبایت حجم دارند.</p>
+    <div class="fix"><b>راه‌حل:</b><ul>
+     <li>reCAPTCHA و Google Sign-In فقط وقتی بارگذاری شوند که کاربر روی فرم ورود کلیک کرد (lazy load).</li>
+     <li>jQuery دو بار بارگذاری می‌شود (<code>code.jquery.com</code> و نسخه‌ی پنل). یکی حذف شود.</li>
+     <li>Font Awesome و Remix Icon و flag-icon هر سه بارگذاری می‌شوند. فونت Remix Icon به‌تنهایی ۱۷۸ کیلوبایت است، برای حدود ۳۰ آیکون. بهتر است با SVG درون‌خطی جایگزین شوند.</li>
+     <li>Google Fonts چهار خانواده با ۵ وزن می‌گیرد. هر زبان فقط فونت خودش را بگیرد و ۲ یا ۳ وزن کافی است.</li>
+     <li>CSS و JS غیرضروری با <code>defer</code> یا <code>media="print" onload</code> از مسیر اصلی خارج شوند. Lighthouse حدود ۵۵۸ کیلوبایت JS و ۱۰۵ کیلوبایت CSS بلااستفاده گزارش کرده است.</li>
+    </ul></div>
+    <div class="ev">شاهد: Lighthouse 12.8، موبایل با محدودسازی شبیه‌سازی‌شده‌ی شبکه، ۲۷ اکتبر ۲۰۲۶ ساعت ۱۷:۲۴ به وقت برلین. دسکتاپ: امتیاز ۸۶، LCP ۱٫۹ ثانیه.</div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic hi"><svg class="ic"><use href="#i-image"/></svg></span><div>
+    <h4>تصویر اصلی بالای صفحه (LCP) حدود ۱۰ برابر سنگین‌تر از نیاز است</h4>
+    <p>عنصر LCP صفحه‌ی اصلی تصویر <code>/public/tg-plane.png</code> است. این تصویر روی موبایل در اندازه‌ی ۱۲۰×۱۰۵ پیکسل نمایش داده می‌شود، ولی فایل اصلی ۶۸۶×۵۹۹ پیکسل و ۲۰۵ کیلوبایت است. لوگوی فوتر هم یک JPEG با ابعاد ۱۲۵۴×۱۲۵۴ و حجم ۱۰۸ کیلوبایت است، با پسوند png، و حداکثر در عرض ۱۷۰ پیکسل نمایش داده می‌شود.</p>
+    <div class="fix"><b>راه‌حل:</b> این تصاویر را خودم آزمایشی تبدیل کردم: تصویر هواپیما در عرض ۴۸۰ پیکسل (WebP) <b>۱۹ کیلوبایت</b> شد (از ۲۰۵ کیلوبایت) و لوگو در ۳۴۰ پیکسل (WebP) <b>۸٫۶ کیلوبایت</b> شد (از ۱۰۸ کیلوبایت). تصویر اصلی هم باید preload شود و اولویت بالا بگیرد:
+     <pre>&lt;link rel="preload" as="image" href="/public/tg-plane-480.webp" fetchpriority="high"&gt;
+&lt;img src="/public/tg-plane-480.webp" width="240" height="210" alt="SMM TG" fetchpriority="high"&gt;</pre></div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic hi"><svg class="ic"><use href="#i-file"/></svg></span><div>
+    <h4>صفحه‌ی لیست قیمت (Services) ۶٫۸ مگابایت HTML دارد</h4>
+    <p>صفحه‌ی <code>/services</code> همه‌ی حدود ۶٬۹۰۰ سرویس را یکجا در HTML می‌فرستد: حدود ۱۹۳ هزار کلمه، ۴۱۷ تیتر H2 و ۶٬۸۹۷ تیتر H3. نسخه‌ی فارسی ۷٫۱ مگابایت است. Lighthouse در دو بار تست این صفحه هر دو بار به خطای timeout خورد، چون مرورگر نتوانست به‌موقع پردازشش کند. این مهم‌ترین صفحه برای کاربری است که می‌خواهد قیمت ببیند و خرید کند. روی موبایل‌های معمولی یا کند می‌شود یا کرش می‌کند، و برای گوگل هم صفحه‌ای است که موضوع روشنی ندارد.</p>
+    <div class="fix"><b>راه‌حل:</b><ul>
+     <li>صفحه‌ی Services فقط دسته‌ها را نشان دهد و سرویس‌های هر دسته با کلیک یا اسکرول بارگذاری شوند (lazy load با JSON).</li>
+     <li>برای پلتفرم‌های اصلی صفحه‌ی جدا ساخته شود: <code>/services/telegram</code>، <code>/services/instagram</code>، <code>/services/youtube</code>، <code>/services/tiktok</code>. هر صفحه عنوان، توضیح و H1 مخصوص خودش را داشته باشد. این صفحه‌ها همان صفحه‌هایی‌اند که می‌توانند برای جست‌وجوهای خرید رتبه بگیرند.</li>
+     <li>تیترهای سرویس‌ها از H3 به عنصر معمولی تبدیل شوند. تیترها برای ساختار محتوا هستند، نه برای هر ردیف قیمت.</li>
+    </ul></div>
+    <div class="ev">شاهد: دانلود مستقیم صفحه. ۶٬۷۸۷٬۲۱۱ بایت، و با فشرده‌سازی gzip ۲۶۹٬۴۹۱ بایت.</div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic hi"><svg class="ic"><use href="#i-lock"/></svg></span><div>
+    <h4>نسخه‌ی http:// سایت جواب نمی‌دهد و HSTS فعال نیست</h4>
+    <p>نشانی‌های <code>http://smmtg.com</code> و <code>http://www.smmtg.com</code> در دو تست از دو شبکه‌ی جداگانه بدون هیچ پاسخی timeout شدند و به https هدایت نشدند. هر کسی که دامنه را بدون https تایپ کند یا روی لینک قدیمی http کلیک کند، به سایت نمی‌رسد. هدر <code>Strict-Transport-Security</code> هم روی نسخه‌ی https وجود ندارد.</p>
+    <div class="fix"><b>راه‌حل (nginx، نیاز به دسترسی سرور):</b> پورت ۸۰ باز شود و با 301 به https برود:
+     <pre>server {
+  listen 80;
+  server_name smmtg.com www.smmtg.com;
+  return 301 https://smmtg.com$request_uri;
+}
+# در بلوک https:
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;</pre></div>
+    <div class="ev">پیشنهاد: بعد از اصلاح، این مورد را از جاهای مختلف دوباره تست کنیم، چون ممکن است فایروال میزبان پورت ۸۰ را برای بعضی کشورها بسته باشد.</div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic hi"><svg class="ic"><use href="#i-key"/></svg></span><div>
+    <h4>هیچ صفحه‌ای برای کلمات کلیدی خرید وجود ندارد</h4>
+    <p>صفحه‌ی اصلی ۲۹۰ کلمه دارد و H1 آن فقط نام برند است («SMM TG»). وبلاگ فقط ۱ مقاله دارد (به انگلیسی، منتشرشده در ۲۷ اکتبر ۲۰۲۶). برای جست‌وجوهایی که کاربر واقعی با آن‌ها دنبال این خدمات می‌گردد، مثل «خرید ممبر تلگرام» یا «buy telegram members»، هیچ صفحه‌ی اختصاصی‌ای نیست. بدون این صفحه‌ها گوگل دلیلی برای نشان دادن سایت در این جست‌وجوها ندارد.</p>
+    <div class="fix"><b>راه‌حل:</b> برای هر سرویس پرفروش یک صفحه‌ی فرود ساخته شود، با ۶۰۰ تا ۱۰۰۰ کلمه محتوای مفید: نوع سرویس‌ها، قیمت از چند، سرعت شروع، گارانتی و ریفیل، سؤالات متداول و دکمه‌ی سفارش. هر صفحه به سه زبان فارسی، عربی و انگلیسی باشد. H1 صفحه‌ی اصلی هم توصیفی شود، مثلاً «پنل SMM ارزان برای تلگرام، اینستاگرام و تیک‌تاک». فهرست پیشنهادی کلمات در بخش «کلمات کلیدی» آمده است.</div>
+   </div></div>
+  </div>
+
+  <!-- MEDIUM -->
+  <div class="card">
+   <div class="ch"><h3><span class="tag md">اولویت متوسط</span> اصلاحاتی که اعتماد و کیفیت را بالا می‌برند</h3></div>
+
+   <div class="issue"><span class="iss-ic md"><svg class="ic"><use href="#i-flag"/></svg></span><div>
+    <h4>نسخه‌ی فارسی فقط نیمه‌ترجمه است</h4>
+    <p>در <code>?lang=fa</code> منوها و صفحه‌ی اصلی فارسی هستند، اما مقاله‌ی وبلاگ کاملاً انگلیسی مانده و عنوانش هم انگلیسی است. نام همه‌ی سرویس‌ها و دسته‌ها در لیست قیمت هم انگلیسی است. گوگل صفحه‌ای که <code>lang="fa"</code> دارد ولی محتوایش انگلیسی است را صفحه‌ی فارسی باکیفیتی نمی‌بیند، و کاربر فارسی‌زبان هم اعتماد نمی‌کند.</p>
+    <div class="fix"><b>راه‌حل:</b> نام دسته‌های اصلی (حداقل ۵۰ دسته‌ی پرفروش تلگرام و اینستاگرام) و مقاله‌ی وبلاگ ترجمه شوند. تا وقتی ترجمه کامل نشده، نسخه‌ی فارسی مقاله از sitemap و hreflang حذف شود.</div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic md"><svg class="ic"><use href="#i-wrench"/></svg></span><div>
+    <h4>نام دسته‌ها غلط املایی دارد و ساختارش به‌هم‌ریخته است</h4>
+    <p>اولین دسته‌ی لیست قیمت «Telegram - Premium <b>Mmebers</b> ( New Prices )» است. دسته‌ای با نام «Updateing» هم هست، دسته‌هایی که فقط خط جداکننده‌اند («-------»)، و هم «YouTube» و هم «Youtube» به‌صورت جدا. اولین تیتر H3 صفحه هم «No services found» است. این‌ها روی اعتماد کاربری که برای اولین بار لیست قیمت را می‌بیند اثر منفی دارند.</p>
+    <div class="fix"><b>راه‌حل:</b> نام دسته‌ها اصلاح و یکدست شود، دسته‌های جداکننده حذف شوند و پیام «No services found» تا وقتی نتیجه‌ی جست‌وجو خالی نیست پنهان بماند. این‌ها در پنل مدیریت و بدون نیاز به برنامه‌نویسی انجام می‌شوند.</div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic md"><svg class="ic"><use href="#i-image"/></svg></span><div>
+    <h4>کش مرورگر برای فایل‌های خود سایت تنظیم نشده است</h4>
+    <p>فایل‌های <code>/public/*.css</code>، <code>tg-plane.png</code> و لوگو هیچ هدر <code>Cache-Control</code> ندارند. کاربری که برمی‌گردد، هر بار حدود ۳۱۳ کیلوبایت را دوباره دانلود می‌کند. فایل‌های CDN پنل درست کش می‌شوند (یک سال).</p>
+    <pre>location ~* \.(png|jpe?g|webp|svg|css|js|woff2)$ {
+  add_header Cache-Control "public, max-age=2592000";
+}</pre>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic md"><svg class="ic"><use href="#i-code"/></svg></span><div>
+    <h4>۳ خطای جاوااسکریپت روی صفحه‌ی اصلی</h4>
+    <p>Lighthouse این خطاها را ثبت کرده است: <code>MutationObserver.observe</code> روی عنصر <code>#srv-desc</code> که در صفحه‌ی اصلی وجود ندارد (خط ۸۳۱)، و دو خطای <code>null</code> در فایل <code>1cdlbqmm1i66bxpc.js</code>. اسکریپت‌های مخصوص صفحه‌ی سفارش روی همه‌ی صفحات اجرا می‌شوند.</p>
+    <pre>const t = document.getElementById('srv-desc');
+if (t) observer.observe(t, { childList: true, characterData: true, subtree: true });</pre>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic md"><svg class="ic"><use href="#i-file"/></svg></span><div>
+    <h4>مقاله‌ی وبلاگ ۲٬۲۷۱ کلمه دارد ولی هیچ زیرتیتری ندارد</h4>
+    <p>مقاله‌ی «What Is an SMM Panel?» حتی یک H2 یا H3 ندارد و همه‌اش پاراگراف پشت سر هم است. عنوانش هم برند را دو بار تکرار می‌کند: «… | SMMTG | SMM TG». گوگل از زیرتیترها برای فهم موضوع و ساختن snippet استفاده می‌کند.</p>
+    <div class="fix"><b>راه‌حل:</b> هر بخش یک H2 بگیرد. یک فهرست مطالب و لینک داخلی به صفحه‌ی Services و صفحه‌های سرویس اضافه شود، و عنوان به «What Is an SMM Panel? How It Works | SMM TG» اصلاح شود.</div>
+   </div></div>
+
+   <div class="issue"><span class="iss-ic md"><svg class="ic"><use href="#i-check"/></svg></span><div>
+    <h4>نشان امتیاز Trustpilot به هیچ‌جا لینک نمی‌شود</h4>
+    <p>در فوتر همه‌ی صفحات «4.7/5، 1257 ratings» با لوگوی Trustpilot آمده، اما لینکش <code>href="#"</code> است. کاربر نمی‌تواند این امتیاز را بررسی کند، و برای کاربر حرفه‌ای این ادعای تأییدنشده اعتماد را کم می‌کند، نه زیاد. کپی‌رایت هم هنوز «© 2025» است.</p>
+    <div class="fix"><b>راه‌حل:</b> اگر صفحه‌ی Trustpilot واقعی دارید، به آن لینک شود. اگر ندارید، نشان برداشته شود و به‌جایش چیزی گذاشته شود که قابل بررسی است، مثل لینک کانال تلگرام با تعداد عضو یا نظرات واقعی مشتری‌ها. سال کپی‌رایت هم خودکار شود.</div>
+   </div></div>
+  </div>
+
+  <!-- LOW -->
+  <div class="card">
+   <div class="ch"><h3><span class="tag lo">اولویت پایین</span> بهینه‌سازی‌های تکمیلی</h3></div>
+   <table>
+    <tr><th>مورد</th><th>وضعیت فعلی</th><th>راه‌حل</th></tr>
+    <tr><td>پیش‌نمایش لینک در تلگرام و شبکه‌ها</td><td><code>twitter:card</code> برابر summary است و <code>og:image</code> همان لوگوی مربعی است</td><td>یک تصویر ۱۲۰۰×۶۳۰ با پیام اصلی و <code>summary_large_image</code>. در تلگرام، جایی که مشتری‌ها لینک را می‌بینند، اثر مستقیم دارد.</td></tr>
+    <tr><td>داده‌ی ساختاریافته</td><td>فقط Organization، WebSite و BlogPosting</td><td>اضافه کردن <code>sameAs</code> (کانال تلگرام)، <code>contactPoint</code>، و BreadcrumbList برای وبلاگ و صفحه‌های سرویس</td></tr>
+    <tr><td>متن جایگزین تصاویر</td><td>لوگوی هدر و فوتر <code>alt</code> خالی دارند</td><td><code>alt="SMM TG"</code> برای لوگو</td></tr>
+    <tr><td>نشانی‌های زبان</td><td>پارامتری: <code>?lang=fa</code>. هر مقدار دلخواه مثل <code>?lang=xx</code> هم 200 برمی‌گرداند</td><td>در بلندمدت مسیرهای تمیز مثل <code>/fa/</code> و <code>/ar/</code>، و ریدایرکت یا 404 برای زبان نامعتبر</td></tr>
+    <tr><td>صفحه‌های ارز</td><td><code>/service/EUR</code> و ۱۲ صفحه‌ی مشابه، هر کدام ۶٫۸ مگابایت</td><td>noindex درست است، ولی همان مشکل حجم را دارند و با lazy load صفحه‌ی Services خودشان درست می‌شوند</td></tr>
+    <tr><td>کش HTML</td><td><code>no-store</code> روی همه‌ی صفحات عمومی</td><td>برای صفحات عمومی بدون ورود (وبلاگ، صفحه‌های سرویس) کش کوتاه یا CDN</td></tr>
+   </table>
+  </div>
+ </section>
+
+ <!-- MOBILE & LINKING -->
+ <section class="sec" id="mobile">
+  <div class="sec-h"><h2><svg class="ic"><use href="#i-phone"/></svg>موبایل، لینک‌سازی داخلی و محتوا</h2></div>
+  <div class="g2">
+   <div class="card">
+    <div class="ch"><h3><svg class="ic"><use href="#i-phone"/></svg>سازگاری با موبایل</h3><span class="tag warn">ظاهر خوب، سرعت ضعیف</span></div>
+    <ul class="list">
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>viewport درست است، منوی موبایل و نوار پایین (Services، Sign up، Sign in) وجود دارد و CLS صفر است.</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>کنتراست رنگ، برچسب فرم‌ها و نام لینک‌ها در Lighthouse بدون خطاست.</span></li>
+     <li><svg class="ic bad"><use href="#i-x"/></svg><span>FCP موبایل ۴٫۷ ثانیه و LCP ۱۰٫۷ ثانیه. کاربر موبایل قبل از دیدن صفحه می‌رود.</span></li>
+     <li><svg class="ic bad"><use href="#i-x"/></svg><span>صفحه‌ی Services با ۶٫۸ مگابایت روی موبایل عملاً قابل استفاده نیست.</span></li>
+    </ul>
+   </div>
+   <div class="card">
+    <div class="ch"><h3><svg class="ic"><use href="#i-map"/></svg>لینک‌سازی داخلی و عمق محتوا</h3></div>
+    <table>
+     <tr><th>صفحه</th><th>کلمات</th><th>H1</th></tr>
+     <tr><td>صفحه‌ی اصلی</td><td>۲۹۰</td><td class="l">SMM TG</td></tr>
+     <tr><td>Signup</td><td>۱۰۰</td><td class="l">Rise to social media.</td></tr>
+     <tr><td>Terms</td><td>۹۳</td><td class="l">Terms of service</td></tr>
+     <tr><td>Blog</td><td>۱۱۷ (۱ مقاله)</td><td class="l">Blog</td></tr>
+     <tr><td>API</td><td>۷۲۰</td><td class="l">API</td></tr>
+    </table>
+    <p class="muted" style="margin-top:8px">هر صفحه فقط ۱۲ تا ۱۵ لینک داخلی دارد که همه‌شان منو هستند. صفحه‌ی اصلی به هیچ دسته یا سرویس مشخصی لینک نمی‌دهد. پیشنهاد: بخش «سرویس‌های محبوب» با لینک به صفحه‌های تلگرام، اینستاگرام و تیک‌تاک.</p>
+   </div>
+  </div>
+ </section>
+
+ <!-- KEYWORDS -->
+ <section class="sec" id="keywords">
+  <div class="sec-h"><h2><svg class="ic"><use href="#i-key"/></svg>فرصت‌های کلمات کلیدی برای جذب کاربر واقعی</h2><p>بر اساس سرویس‌هایی که همین الان در پنل دارید</p></div>
+  <div class="card">
+   <p style="font-size:13.8px;color:var(--ink2)">این خوشه‌ها مستقیماً از دسته‌های پرتعداد پنل شما گرفته شده‌اند: ممبر تلگرام، استارت ربات، ویو پست، لایک و فالوور اینستاگرام. حجم جست‌وجوی دقیق و رقابت هر کلمه را در شروع پروژه با Search Console و ابزار کلمات کلیدی می‌سنجیم و صفحه‌ها را به ترتیب پتانسیل می‌سازیم. در این گزارش عدد ساختگی نیاورده‌ام.</p>
+   <div class="g2" style="margin-top:12px">
+    <div><b>فارسی</b><div class="kw"><span>خرید ممبر تلگرام</span><span>خرید ممبر واقعی تلگرام</span><span>خرید ممبر فیک تلگرام</span><span>خرید بازدید پست تلگرام</span><span>خرید استارت ربات تلگرام</span><span>خرید ری‌اکشن تلگرام</span><span>پنل اس ام ام ارزان</span><span>خرید فالوور اینستاگرام</span><span>خرید لایک اینستاگرام</span><span>پنل نمایندگی فالوور</span></div></div>
+    <div><b>عربی</b><div class="kw"><span>شراء أعضاء تيليجرام</span><span>زيادة مشاهدات تيليجرام</span><span>لوحة SMM رخيصة</span><span>شراء متابعين انستقرام</span><span>زيادة لايكات تيك توك</span></div>
+    <b style="display:block;margin-top:12px">انگلیسی</b><div class="kw ltr"><span>buy telegram members</span><span>telegram post views</span><span>telegram bot start service</span><span>cheap smm panel</span><span>smm panel api</span><span>smm reseller panel</span></div></div>
+   </div>
+   <div class="fix" style="margin-top:14px"><b>ساختار پیشنهادی:</b> یک صفحه برای هر خوشه (مثلاً <code>/fa/telegram-members</code>) با جدول قیمت همان دسته، توضیح فرق ممبر واقعی و فیک، زمان شروع، گارانتی، سؤالات متداول و لینک مستقیم سفارش. این صفحه‌ها به هم و به مقاله‌های راهنما لینک می‌شوند. مقاله‌های راهنما مثل «ممبر واقعی تلگرام چیست و چطور ریزش نکند» کاربر مردد را به این صفحه‌ها می‌رسانند.</div>
+  </div>
+ </section>
+
+ <!-- PLAN -->
+ <section class="sec" id="plan">
+  <div class="sec-h"><h2><svg class="ic"><use href="#i-map"/></svg>اصلاحات سریع در برابر کارهای بزرگ‌تر</h2></div>
+  <div class="plan">
+   <div class="card ph"><h4>اصلاحات سریع</h4><span class="muted">قابل انجام در چند روز اول</span>
+    <ul class="list">
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>تبدیل و preload تصویر هواپیما و لوگو به WebP</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>حذف jQuery تکراری و lazy load کردن reCAPTCHA و Google Sign-In</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>کم کردن فونت‌ها و آیکون‌فونت‌ها</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>رفع ۳ خطای جاوااسکریپت</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>ریدایرکت http و HSTS و هدرهای کش (با دسترسی سرور)</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>اصلاح H1، عنوان مقاله، alt لوگو، نشان Trustpilot، سال کپی‌رایت و غلط‌های نام دسته‌ها</span></li>
+     <li><svg class="ic good"><use href="#i-check"/></svg><span>تصویر OG ۱۲۰۰×۶۳۰ و تکمیل schema</span></li>
+    </ul></div>
+   <div class="card ph" style="border-top-color:var(--org)"><h4>کارهای میان‌مدت</h4><span class="muted">هفته‌ی دوم و سوم</span>
+    <ul class="list">
+     <li><svg class="ic mid"><use href="#i-check"/></svg><span>بازسازی صفحه‌ی Services با lazy load دسته‌ها</span></li>
+     <li><svg class="ic mid"><use href="#i-check"/></svg><span>۴ صفحه‌ی پلتفرم (تلگرام، اینستاگرام، یوتیوب، تیک‌تاک) به ۳ زبان</span></li>
+     <li><svg class="ic mid"><use href="#i-check"/></svg><span>ترجمه‌ی دسته‌های پرفروش و مقاله‌ی وبلاگ به فارسی و عربی</span></li>
+     <li><svg class="ic mid"><use href="#i-check"/></svg><span>بخش «سرویس‌های محبوب» و لینک‌سازی داخلی</span></li>
+    </ul></div>
+   <div class="card ph" style="border-top-color:var(--blu)"><h4>رشد مداوم</h4><span class="muted">ماهانه</span>
+    <ul class="list">
+     <li><svg class="ic" style="color:var(--blu)"><use href="#i-check"/></svg><span>اتصال Google Search Console و GA4 و گزارش ماهانه</span></li>
+     <li><svg class="ic" style="color:var(--blu)"><use href="#i-check"/></svg><span>صفحه‌های فرود کلمات کلیدی خرید، به ترتیب پتانسیل</span></li>
+     <li><svg class="ic" style="color:var(--blu)"><use href="#i-check"/></svg><span>مقاله‌های راهنما به فارسی و عربی</span></li>
+     <li><svg class="ic" style="color:var(--blu)"><use href="#i-check"/></svg><span>اندازه‌گیری نرخ ثبت‌نام و شارژ حساب از ترافیک ارگانیک</span></li>
+    </ul></div>
+  </div>
+ </section>
+
+ <!-- CTA -->
+ <section class="sec">
+  <div class="card cta">
+   <h3>اجرای این اصلاحات را می‌توانم برایتان انجام بدهم</h3>
+   <p>این گزارش رایگان است و هر کاری بخواهید می‌توانید خودتان با آن انجام بدهید. اگر بخواهید اجرای کار با من باشد، از اصلاحات سریع شروع می‌کنم تا نتیجه‌ی سرعت را در همان هفته‌ی اول ببینید. بعد از هر مرحله هم دوباره Lighthouse می‌گیرم تا عدد قبل و بعد جلوی چشمتان باشد.</p>
+   <ul class="list" style="margin-top:10px">
+    <li><svg class="ic"><use href="#i-check"/></svg><span>کار در قالب و تنظیمات همین پنل فعلی انجام می‌شود و نیازی به عوض کردن پلتفرم نیست.</span></li>
+    <li><svg class="ic"><use href="#i-check"/></svg><span>محتوا به فارسی، عربی و انگلیسی آماده می‌شود.</span></li>
+    <li><svg class="ic"><use href="#i-check"/></svg><span>گزارش پیشرفت مکتوب بعد از هر مرحله</span></li>
+   </ul>
+   <span class="contact"><svg class="ic"><use href="#i-send"/></svg>Telegram: @ariatajeri</span>
+  </div>
+  <div class="card">
+   <div class="ch"><h3><svg class="ic"><use href="#i-info"/></svg>روش بررسی</h3></div>
+   <p class="muted" style="font-size:12.8px">سرعت با Lighthouse 12.8.2 (اجرای محلی Chrome headless) در حالت موبایل با محدودسازی شبیه‌سازی‌شده و در حالت دسکتاپ، روی https://smmtg.com/ در ۲۷ اکتبر ۲۰۲۶ ساعت ۱۷:۲۴ به وقت برلین گرفته شد. نسخه‌ی فارسی (?lang=fa) هم جداگانه در حالت موبایل تست شد. تست Lighthouse صفحه‌ی Services در دو اجرا به‌دلیل حجم صفحه با timeout متوقف شد. API سایت PageSpeed Insights در زمان تست به سقف سهمیه رسیده بود. اعداد آزمایشگاهی Lighthouse با هر اجرا کمی تغییر می‌کنند. داده‌ی کاربران واقعی (CrUX) و آمار Search Console فقط با دسترسی شما قابل دیدن است. بررسی‌های فنی (هدرها، ریدایرکت‌ها، robots، sitemap، canonical، hreflang، تیترها، تعداد کلمات و لینک‌ها) با دریافت مستقیم صفحات انجام شد.</p>
+  </div>
+  <p class="foot">گزارش اختصاصی برای smmtg.com · ۵ آبان ۱۴۰۵</p>
+ </section>
+</main>
+</body>
+</html>
